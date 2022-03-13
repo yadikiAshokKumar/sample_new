@@ -14,9 +14,12 @@
 </target>
 <target name ="create" depends = "clean">
  <mkdir dir="build"/>
+ <mkdir dir="${warDir}/src/main/webapp/classes" />
 </target>
-
-<target name ="copy" depends= "create">
+<target name ="compile" depends ="create">
+	<javac srcdir = "${warDir}/src/main/java/" destdir = "${warDir}/src/main/webapp/classes"/>
+</target>
+<target name ="copy" depends= "compile">
 <copy todir="${warDir}/build/">
 
 <fileset dir="${warDir}/src/main/webapp/"  />

@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-Just starting up motherfucker
+<form method="post" action="Demosignup">
+
+username:-<input type="text" name=name >
+<input type=submit> <input type="reset">
+</form>
 </body>
 </html>
