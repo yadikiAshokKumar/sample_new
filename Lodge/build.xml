@@ -9,6 +9,14 @@
 <property name="warDir" value="${basedir}"/>
 <property name="warFile" value="LODGE.war"/>
 <property name="distDir" value="${basedir}/dist/"/>
+<path id="build.classpath">
+    <fileset dir="D:\software\Tomcat7\apache-tomcat-7.0.32\lib">
+        <include name="servlet-api.jar" />
+    </fileset>
+</path>
+
+
+
 <target name = "clean">
  <delete dir="$build"/>
 </target>
@@ -17,7 +25,7 @@
  <mkdir dir="${warDir}/src/main/webapp/classes" />
 </target>
 <target name ="compile" depends ="create">
-	<javac srcdir = "${warDir}/src/main/java/" destdir = "${warDir}/src/main/webapp/classes"/>
+	<javac srcdir = "${warDir}/src/main/java/"  classpathref="build.classpath" destdir = "${warDir}/src/main/webapp/classes"/>
 </target>
 <target name ="copy" depends= "compile">
 <copy todir="${warDir}/build/">
