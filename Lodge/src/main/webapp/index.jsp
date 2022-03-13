@@ -11,6 +11,8 @@
 
 username:-<input type="text" name=name >
 <input type=submit> <input type="reset">
+
+enter your name
 </form>
 </body>
 </html>
