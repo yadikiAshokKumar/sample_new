@@ -10,7 +10,7 @@
 <property name="warFile" value="LODGE.war"/>
 <property name="distDir" value="${basedir}/dist/"/>
 <path id="build.classpath">
-    <fileset dir="D:\software\Tomcat7\apache-tomcat-7.0.32\lib">
+    <fileset dir="${warDir}/dependencylib">
         <include name="servlet-api.jar" />
     </fileset>
 </path>
